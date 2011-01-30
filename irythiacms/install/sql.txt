@@ -1,0 +1,42 @@
+create table irythiacms_users (
+id int not null primary key auto_increment,
+username varchar(20) not null unique,
+passwd varchar(64) not null,
+level int(3) unsigned not null
+);
+
+create table irythiacms_sessions (
+id varchar(64) primary key not null,
+data text default null,
+lastaccess int(10) unsigned not null
+);
+
+create table irythiacms_articles (
+id int not null primary key auto_increment,
+alias varchar(100) not null unique,
+title varchar(100) not null,
+content text default null,
+published int(1) unsigned not null default 1,
+created int(10) unsigned not null,
+lastupdated int(10) unsigned not null
+);
+
+create table irythiacms_stylesheets (
+id int not null primary key auto_increment,
+name varchar(100) not null unique,
+content text default null,
+loaded int(1) unsigned not null default 0,
+created int(10) unsigned not null,
+lastupdated int(10) unsigned not null
+);
+
+create table irythiacms_templates (
+id int not null primary key auto_increment,
+name varchar(100) not null unique,
+content text default null,
+loaded int(1) unsigned not null default 0,
+created int(10) unsigned not null,
+lastupdated int(10) unsigned not null
+);
+
+insert into irythiacms_users(username, passwd, level) values ('admin', '13601bda4ea78e55a07b98866d2be6be0744e3866f13c00c811cab608a28f322', '100');

@@ -1,0 +1,322 @@
+/* Reset default styles */
+
+html, body, form, fieldset, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input[type=text], input[type=password], textarea {
+    border: 0;
+    padding: 0;
+}
+
+/* Site-wide configurations */
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-size: .8em;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #21354e;
+}
+
+input, textarea {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #006699;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+
+.header {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    background-color: #117777;
+    color: #ffffff;
+}
+
+.cmsinfo {
+    float: right;
+    text-align: right;
+    /* Extra spacing in case browser window is small */
+    padding-left: 25px;
+}
+
+/* Navigation */
+
+.navigation {
+    /* Since this box is floated, margins no longer collapse */
+    margin: 0 10px 10px 10px;
+    border-bottom: 1px solid #ffffff;
+    float: left;
+    width: 250px;
+}
+
+    .navheader {
+        background-color: #117777;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .navigation ul {
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        padding: 5px;
+        background-color: #99cccc;
+    }
+
+/* Message bar */
+
+.error {
+    margin: 10px 10px 10px 270px;
+    padding: 10px 5px 10px 34px;
+    border: 1px solid #ffffff;
+    color: #ff0000;
+    background: #ffff55 url("../../../icons/warning.png") 5px center no-repeat;
+}
+
+.success {
+    margin: 10px 10px 10px 270px;
+    padding: 10px 5px 10px 34px;
+    border: 1px solid #ffffff;
+    color: #119900;
+    background: #bbffaa url("../../../icons/success.png") 5px center no-repeat;
+}
+    
+/* Content */
+
+.contentwrapper {
+    margin: 10px 10px 10px 270px;
+    padding: 5px;
+    background-color: #99cccc;
+    border: 1px solid #ffffff;
+    color: #003366;
+}
+
+    .contentwrapper h1 {
+        font-size: 1.5em;
+        border-bottom: 1px solid #003366;
+        margin-bottom: 1em;
+    }
+    
+    .contentwrapper table {
+        border-width: 0 0 1px 1px;
+        border-color: #003366;
+        border-style: solid;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contentwrapper th, .contentwrapper td {
+        border-width: 1px 1px 0 0;
+        border-color: #003366;
+        border-style: solid;
+    }
+    
+    .contentwrapper th {
+        background-color: #6699ff;
+        color: #ffffff;
+        padding: 3px;
+    }
+    
+    .contentwrapper td {
+        background-color: #ccddee;
+        padding: 3px;
+    }
+    
+    /* Highlight for loaded item */
+    .contentwrapper .loaded td {
+        background-color: #ddffdd;
+    }
+    
+    /* Spacing between options */
+    .contentwrapper td div + div {
+        margin-left: 10px;
+    }
+    
+    .contentwrapper form div {
+        font-weight: bold;
+        margin-top: .5em;
+    }
+    
+    .contentwrapper input[type=text], .contentwrapper input[type=password] {
+        width: 25%;
+    }
+    
+    .contentwrapper textarea {
+        width: 100%;
+    }
+    
+    .contentwrapper .addbutton {
+        margin-bottom: .5em;
+        background: url("../../../icons/add.png") center left no-repeat;
+        padding-left: 19px;
+    }
+    
+    .contentwrapper .editbutton {
+        background: url("../../../icons/edit.png") center left no-repeat;
+        padding-left: 19px;
+        display: inline;
+    }
+    
+    .contentwrapper .deletebutton {
+        background: url("../../../icons/delete.png") center left no-repeat;
+        padding-left: 19px;
+        display: inline;
+    }
+    
+    .contentwrapper .loadbutton {
+        background: url("../../../icons/load.png") center left no-repeat;
+        padding-left: 19px;
+        display: inline;
+    }
+    
+    .contentwrapper input[type=submit], .contentwrapper input[type=button] {
+        background-color: #003366;
+        border: 1px solid #ffffff;
+        font-size: .9em;
+        color: #ffffff;
+        width: 60px;
+        margin-bottom: .5em;
+    }
+    
+    .contentwrapper input[type=button] {
+        margin-left: 5px;
+    }
+    
+    .contentwrapper input[type=submit]:hover, .contentwrapper input[type=button]:hover {
+        background-color: #1c87b3;
+    }
+
+/* Login page */
+
+.loginbox {
+    position: absolute;
+    width: 460px;
+    background-color: #ffffff;
+    background-image: url("../images/loginsplash.jpg");
+    border: 1px solid #ffffff;
+    top: 20%;
+    left: 50%;
+    margin-left: -250px;
+    padding: 30px 20px;
+    color: #ffffff;
+}
+
+    .loginform {
+        width: 250px;
+        float: left;
+    }
+    
+        .loginform li {
+            margin-bottom: 5px;
+        }
+        
+            .loginform label {
+                width: 90px;
+                display: inline-block;
+            }
+            
+            .loginform input[type=text], .loginform input[type=password] {
+                width: 150px;
+                font-size: .9em;
+            }
+            
+        .loginform input[type=submit], .loginform input[type=reset] {
+            background-color: #003366;
+            border: 1px solid #ffffff;
+            font-size: .9em;
+            margin-left: 90px;
+            color: #ffffff;
+            width: 60px;
+        }
+        
+        .loginform input[type=reset] {
+            margin-left: 5px;
+        }
+        
+        .loginform input[type=submit]:hover, .loginform input[type=reset]:hover {
+            background-color: #1c87b3;
+        }
+        
+    .instruction {
+        float: right;
+        width: 175px;
+    }
+    
+    .loginbox h1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+/* Article manager */
+
+.articlemanager th {
+    width: 25%;
+}
+
+.articlemanager th + th {
+    width: 50%;
+}
+
+.articlemanager th + th + th {
+    width: 25%;
+}
+
+/* Stylesheet manager */
+
+.stylesheetmanager th {
+    width: 75%;
+}
+
+.stylesheetmanager th + th {
+    width: 25%;
+}
+
+/* Template manager */
+
+.templatemanager th {
+    width: 75%;
+}
+
+.templatemanager th + th {
+    width: 25%;
+}
+
+/* User manager */
+
+.usermanager th {
+    width: 50%;
+}
+
+.usermanager th + th {
+    width: 25%;
+}
+
+.usermanager th + th + th {
+    width: 25%;
+}
